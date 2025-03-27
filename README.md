@@ -1,2 +1,2 @@
-# cv-template
-Template for CV
+# cv
+CV Template
