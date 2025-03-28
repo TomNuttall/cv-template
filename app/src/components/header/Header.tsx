@@ -33,7 +33,7 @@ const Header: React.FC<React.PropsWithChildren<HeaderProps>> = ({
     .join('')
 
   return (
-    <div className="header">
+    <header className="header">
       <div className="header__content">
         <div className="header__logo">
           <User title="user" />
@@ -50,7 +50,7 @@ const Header: React.FC<React.PropsWithChildren<HeaderProps>> = ({
         </nav>
       </div>
       {children}
-    </div>
+    </header>
   )
 }
 

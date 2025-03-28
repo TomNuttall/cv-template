@@ -30,6 +30,7 @@ function App() {
           </button>
         </Header>
         <div className="app__content" ref={contentRef}>
+          <style>{`@page { margin: 4rem; }`}</style>
           <Routes>
             <Route path="/" element={<Navigate to="/cv" replace={true} />} />
             <Route path="/cv" element={<CV />} />

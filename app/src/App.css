@@ -22,15 +22,10 @@
 }
 
 .app__content {
-  width: 100%;
+  background-color: white;
+  padding: 6rem 4rem;
 
   @media print {
-    background-color: white;
-    font-size: 13px;
-
-    @page {
-      size: A4 portrait;
-      margin: 15in;
-    }
+    padding: 0;
   }
 }
