@@ -10,7 +10,7 @@ type IconProps = {
   iconLocation?: IconLocation
 }
 
-const Link: React.FC<React.PropsWithChildren<IconProps>> = ({
+const Icon: React.FC<React.PropsWithChildren<IconProps>> = ({
   children,
   icon,
   iconLocation = IconLocation.LEFT,
@@ -24,4 +24,4 @@ const Link: React.FC<React.PropsWithChildren<IconProps>> = ({
   )
 }
 
-export default Link
+export default Icon

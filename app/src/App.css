@@ -1,6 +1,36 @@
 #root {
   max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  margin: 2rem auto 4rem auto;
+}
+
+.app__print {
+  background-color: transparent;
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  border: 1px solid;
+  border-radius: 0.25rem;
+
+  padding: 0.75rem 1.5rem;
+
+  text-align: center;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #1a1b29;
+  }
+}
+
+.app__content {
   width: 100%;
+
+  @media print {
+    background-color: white;
+    font-size: 13px;
+
+    @page {
+      size: A4 portrait;
+      margin: 15in;
+    }
+  }
 }

@@ -6,6 +6,7 @@ import Email from './email.svg?react'
 import ExternalLink from './external-link.svg?react'
 import GitHubLogo from './github-mark.svg?react'
 import Location from './location.svg?react'
+import User from './user.svg?react'
 import Wrench from './wrench.svg?react'
 
 export {
@@ -16,5 +17,6 @@ export {
   ExternalLink,
   GitHubLogo,
   Location,
+  User,
   Wrench,
 }

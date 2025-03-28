@@ -10,12 +10,7 @@ import skills from '../../assets/data/skills.json'
 
 import './CV.css'
 
-type CVProps = {
-  name: string
-}
-
-const CV: React.FC<CVProps> = ({ name }) => {
-  document.title = `${name} - CV`
+const CV: React.FC = () => {
   return (
     <div className="cv">
       <h1>{profile.name}</h1>

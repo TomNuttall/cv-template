@@ -1,9 +1,8 @@
-import { describe, it, expect } from 'vitest'
 import { render, screen } from '@testing-library/react'
 
 import Employement from './Employement'
 
-describe('<Education />', () => {
+describe('<Employement />', () => {
   it('should render component', () => {
     // Arrange
     const details = {
