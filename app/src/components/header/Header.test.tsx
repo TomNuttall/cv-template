@@ -4,12 +4,13 @@ import { MemoryRouter } from 'react-router-dom'
 import Header from './Header'
 
 describe('<Header />', () => {
+  const links = [
+    { name: 'CV', src: '/' },
+    { name: 'Covering Letter', src: '/covering-letter' },
+  ]
+
   it('should render component', () => {
     // Arrange
-    const links = [
-      { name: 'CV', src: '/' },
-      { name: 'Covering Letter', src: '/covering-letter' },
-    ]
 
     // Act
     render(
@@ -19,6 +20,27 @@ describe('<Header />', () => {
     )
 
     // Assert
+    expect(screen.getByText('TU')).toBeInTheDocument()
     expect(screen.getByRole('link', { name: 'CV' })).toBeInTheDocument()
+    expect(
+      screen.getByRole('link', { name: 'Covering Letter' }),
+    ).toBeInTheDocument()
+  })
+
+  it('should render component with children', () => {
+    // Arrange
+    const children = <button>CTA</button>
+
+    // Act
+    render(
+      <MemoryRouter>
+        <Header links={links} name={'Test User'}>
+          {children}
+        </Header>
+      </MemoryRouter>,
+    )
+
+    // Assert
+    expect(screen.getByRole('button', { name: 'CTA' })).toBeInTheDocument()
   })
 })
