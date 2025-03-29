@@ -1,5 +1,5 @@
 import Education from '../../components/education'
-import Employement from '../../components/employement'
+import Employment from '../../components/employment'
 import Profile from '../../components/profile'
 import Skills from '../../components/skills'
 
@@ -17,7 +17,7 @@ const CV: React.FC = () => {
       <Profile {...profile} />
       <h2>Employment</h2>
       {jobs.map((job, idx) => (
-        <Employement key={idx} {...job} />
+        <Employment key={idx} {...job} />
       ))}
       <h2>Education</h2>
       {courses.map((course, idx) => (

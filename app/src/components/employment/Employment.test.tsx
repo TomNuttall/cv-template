@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react'
 
-import Employement from './Employement'
+import Employment from './Employment'
 
-describe('<Employement />', () => {
+describe('<Employment />', () => {
   it('should render component', () => {
     // Arrange
     const details = {
@@ -15,7 +15,7 @@ describe('<Employement />', () => {
       yearFrom: 2000,
     }
     // Act
-    render(<Employement {...details} />)
+    render(<Employment {...details} />)
 
     // Assert
     expect(
@@ -23,8 +23,8 @@ describe('<Employement />', () => {
     ).toBeInTheDocument()
     expect(screen.getByText('2000 - Current')).toBeInTheDocument()
     expect(screen.getByText('Location')).toBeInTheDocument()
-    expect(screen.getAllByTestId('employement-details')).toHaveLength(3)
+    expect(screen.getAllByTestId('employment-details')).toHaveLength(3)
     expect(screen.getByRole('heading', { name: 'Project' })).toBeInTheDocument()
-    expect(screen.getAllByTestId('employement-projects')).toHaveLength(2)
+    expect(screen.getAllByTestId('employment-projects')).toHaveLength(2)
   })
 })

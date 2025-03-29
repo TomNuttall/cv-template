@@ -3,9 +3,9 @@ import { Calendar, Location } from '../../assets/icons'
 import Icon from '../utility/icon'
 import Link from '../utility/link'
 import { formatYear } from '../../lib/formatYear'
-import './Employement.css'
+import './Employment.css'
 
-type EmployementProps = {
+type EmploymentProps = {
   company: string
   location: string
   projectType: string
@@ -16,7 +16,7 @@ type EmployementProps = {
   yearTo?: number | string
 }
 
-const Employement: React.FC<EmployementProps> = ({
+const Employment: React.FC<EmploymentProps> = ({
   company,
   location,
   projectDetails,
@@ -27,12 +27,12 @@ const Employement: React.FC<EmployementProps> = ({
   yearTo,
 }) => {
   return (
-    <div className="subsection employement">
-      <div className="employement__summary">
+    <div className="subsection employment">
+      <div className="employment__summary">
         <h3>{`${role}, ${company}`}</h3>
-        <div className="employement__about">
+        <div className="employment__about">
           <Icon icon={<Calendar title="dates" />}>
-            <div className="employement__date">
+            <div className="employment__date">
               {formatYear(yearFrom, yearTo)}
             </div>
           </Icon>
@@ -42,7 +42,7 @@ const Employement: React.FC<EmployementProps> = ({
       {roleDetails.length > 0 && (
         <ul>
           {roleDetails.map((details, idx) => (
-            <li key={`role_${idx}`} data-testid="employement-details">
+            <li key={`role_${idx}`} data-testid="employment-details">
               {details}
             </li>
           ))}
@@ -50,11 +50,11 @@ const Employement: React.FC<EmployementProps> = ({
       )}
 
       {projectDetails.length > 0 && (
-        <div className="employement__projects">
+        <div className="employment__projects">
           <h4>{projectType}</h4>
           <ul>
             {projectDetails.map((details, idx) => (
-              <li key={`project_${idx}`} data-testid="employement-projects">
+              <li key={`project_${idx}`} data-testid="employment-projects">
                 <Markdown
                   components={{
                     a: Link,
@@ -72,4 +72,4 @@ const Employement: React.FC<EmployementProps> = ({
   )
 }
 
-export default Employement
+export default Employment

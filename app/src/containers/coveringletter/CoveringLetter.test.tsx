@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react'
 import CoveringLetter from './CoveringLetter'
 
 describe('<CoveringLetter />', () => {
-  it('should render component', () => {
+  it('should render container', () => {
     // Arrange
 
     // Act

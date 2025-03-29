@@ -3,7 +3,7 @@ import Icon from '../icon'
 import { IconLocation } from '../icon/Icon'
 import './Link.css'
 
-const Link: React.FC<React.PropsWithChildren<HTMLAnchorElement>> = ({
+const Link: React.FC<React.AnchorHTMLAttributes<HTMLAnchorElement>> = ({
   href,
   children,
 }) => {

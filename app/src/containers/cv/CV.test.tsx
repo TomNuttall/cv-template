@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react'
 import CV from './CV'
 
 describe('<CV />', () => {
-  it('should render component', () => {
+  it('should render container', () => {
     // Arrange
 
     // Act

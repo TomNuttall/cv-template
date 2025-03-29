@@ -1,18 +1,18 @@
-.employement__summary {
+.employment__summary {
   padding-bottom: 0.5rem;
 }
 
-.employement__about {
+.employment__about {
   display: flex;
   flex-direction: row;
   column-gap: 0.25rem;
 }
 
-.employement__date {
+.employment__date {
   width: 7rem;
 }
 
-.employement__projects {
+.employment__projects {
   padding-top: 0.75rem;
 
   h4 {
